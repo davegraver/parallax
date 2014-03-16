@@ -1,19 +1,10 @@
 (function($) {
+	$("html").niceScroll();
+	
 	// Check if the section has the parallax class.
 	if ($('section').hasClass('parallax')) {
-		// Check if the browser is IE10 or below.
-		if ($.browser.msie) {
-			// Remove the parallax scrolling styles and center background image vertically.
-			$('section.parallax').css({
-				backgroundAttachment: 'scroll',
-				backgroundPosition: '50% 50%'
-			});
-		}
-		else {
-			// If not IE, add the data attributes.
-			$('section.parallax').data('type', 'background');
-			$('section.parallax').data('speed', '10');
-		}
+		$('section.parallax').data('type', 'background');
+		$('section.parallax').data('speed', '10');
 	}
 
 	$(document).ready( function() {
